@@ -1,0 +1,26 @@
+name: First GitHub Actions Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  demo-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Display welcome message
+        run: echo "Welcome to GitHub Actions"
+
+      - name: Check current directory
+        run: pwd
+
+      - name: List files
+        run: ls -l
+
+      - name: Display app content
+        run: cat file1.txt
